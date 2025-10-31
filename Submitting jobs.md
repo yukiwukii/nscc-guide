@@ -52,10 +52,10 @@ The `s` header on the table stands for status. There are a few status your job m
 - `e` exiting. Either finished, or died.
 
 >[!Question] **Help!** My job is eternally queueing.
->You need to increase/decrease the ngpu requested and/or the walltime. Use `qstat -s` command to see why your job is queueing. See [[Min-maxing the queue]] for how to game the system.
+>You need to increase/decrease the ngpu requested and/or the walltime. Use `qstat -s` command to see why your job is queueing. See [Min-maxing the queue](/Min-maxing%20the%20queue.md) for how to game the system.
 ## Checking the Results of your Jobs
 The results of the job is `<job_name>.o<job_id>`.
 
-In here, you can find all the output of your script (the one that would be outputted to the terminal otherwise). **Important Note:** You must wait until the job finishes / dies to see the output. If you need to see the output immediately (to monitor the progress or something), you can create an [[Running jupyter-notebooks|interactive job]] instead.
+In here, you can find all the output of your script (the one that would be outputted to the terminal otherwise). **Important Note:** You must wait until the job finishes / dies to see the output. If you need to see the output immediately (to monitor the progress or something), you can create an [interactive job](/Running%20jupyter-notebooks.md) instead.
 ## Deleting your Jobs
 To delete the jobs, find the job_id with `qstat`, and delete it by running `qdel <job_id>`.

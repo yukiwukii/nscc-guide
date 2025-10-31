@@ -11,7 +11,7 @@ tmux ls # List of running terminals
 tmux a -t my_session # Enter my_session terminal
 tmux kill-session -t my_session # Delete the my_session terminal
 ```
-Once you are on a `tmux` session, you can exit the session by pressing control (not command!) + B. Check this tmux cheatsheet for other controls. TODO: Add the cheatsheet.
+Once you are on a `tmux` session, you can exit the session by pressing control (not command!) + B. Check this [tmux cheatsheet](https://tmuxcheatsheet.com/) for other controls.
 ## Interactive Session
 Submitting the job file using `qstat`, you will only see the output after the job is done. However, if you need to monitor the progress, you can submit an interactive session instead. Just change `qstat <job_file>` to `qstat -I <job_file>`. In the mafia analogy, this is equivalent of you doing the dirty job yourself, instead of asking for a worker.
 
@@ -19,7 +19,7 @@ After your job finishes queueing, you will enter the compute node! This is where
 
 However, for some whatever reason, once you enter the interactive session, they won't run the submitted job automatically. You have to run it again with `./<job_file>`.
 ## Detailed Steps
-1. [[Setting up an environment|Create your environment]]
+1. [Create your environment](/Setting%20up%20an%20environment.md)
 	- In addition to the above, you need to install `ipykernel` with `conda install ipykernel` with your environment activated.
 	- You need to also install jupyter notebook using `pip install notebook`, if you haven't.
 2. Create a tmux session with `tmux new-session -s jupyter`
