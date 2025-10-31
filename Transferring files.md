@@ -20,9 +20,9 @@ scp nscc_username@aspire2antu.nscc.sg:<nscc_path> <local_path>
 ## Local machine -> NSCC
 scp <local_path> nscc_username@aspire2antu.nscc.sg:<nscc_path>
 ```
-If you have a large file that will take ages to upload / download, use `tmux`! Read more about `tmux` here.
+If you have a large file that will take ages to upload / download, use `tmux`! Read more about `tmux` [here](/Running%20jupyter-notebooks.md).
 
-There are some apps that provide a nice GUI for SCP. On MacBook, you can check out CyberDuck. On Windows, I have heard things about Windows-SCP, but I never tried it.
+There are some apps that provide a nice GUI for SCP. On MacBook, you can check out [CyberDuck](https://cyberduck.io/download/). On Windows, I have heard things about Windows-SCP, but I never tried it.
 
 ## Alternative to the alternative: Drag & Drop
 If you have intergrated with VSCode, you can actually just drag and drop your files from Finder / file manager to the directory list in the VSCode window. It's actually quite intuitive.

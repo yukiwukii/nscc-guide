@@ -2,10 +2,10 @@
  First thing first, you need to create an account for NSCC. Link is [here](https://user.nscc.sg/saml/index.php).
 - Note that you must be a student in one of the following institutions: NUS, NTU, ASTAR, SUTD, TCOMS, SMU, SIT, SP, TP and RP.
 
-Then, you need to set a new password. Keep this password safe. You'd need to change your password every 90 days, but NSCC will send you a reminder 9 days before it expires. Take note your username too. Look at "Your NSCC is account is **username**".
+Then, you need to set a new password. Keep this password safe. You'd need to change your password every 90 days, but NSCC will send you a reminder 9 days before it expires. Take note your username too. Look at "Your NSCC is account is **<username>**".
 ## 2. VPN Setup
 You need to be connected to your institution's network to access NSCC. For NTU students, this is NTUSECURE. If you are outside, you can download a VPN. 
-- NTU users can download it [here](gate-student.ntu.edu.sg). 
+- NTU users can download it [here](vpngate-student.ntu.edu.sg). 
 - If you are from other institutions other than NUS, NTU, SUTD, or A-STAR, you need to download NSCC VPN. Detailed steps are in page 8 of [this document](https://help.nscc.sg/wp-content/uploads/2024/05/NSCC-Introductory-Workshop-Practical-ASPIRE2A.pdf). 
 
 **SPECIAL FOR NTU STUDENTS:** Email hpcsupport@ntu.edu.sg requesting for HPCC jumphost access. Give them your NSCC username. 
@@ -25,6 +25,7 @@ ssh -X jumphost_username@jumphost_ip # If you are using lab's personal jumphost
 
 **FOR EVERYONE**:
 ```bash
+# ACCESSING NSCC
 ssh nscc_username@aspire2antu.nscc.sg # For NTU
 ssh nscc_username@aspire2a.nus.edu.sg # For NUS
 ssh nscc_username@aspire2a.a-star.edu.sg # For A-STAR
@@ -56,7 +57,7 @@ Host my_nscc
 5. Using the command panel again, open `Remote-SSH: Connect to Host`. Click `my_nscc`, enter jumphost password, enter NSCC password.
 6. Wait until VSCode finishes downloading the server into your NSCC account. This can take quite a while.
 	- If NSCC decides to die, this is very normal. Keep trying until it works.
-	- If it still doesn't work, look at tunnelling.
+	- If it still doesn't work, look into [tunnelling](/SSH%20tunnelling.md).
 
 If you are successful, congratulations! You don't have to log in via terminal (Step 3) anymore. From now on, whenever you want to access NSCC, you just need to do step 4.5 (Pressing `Remote-SSH: Connect to Host`).
 
