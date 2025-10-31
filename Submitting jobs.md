@@ -66,4 +66,5 @@ To delete the jobs, find the job_id with `qstat`, and delete it by running `qdel
 Your NSCC account comes with a fixed amount of compute quota (called Service Unit/SU). After running the job, you can check how much you have left with `myprojects`. 
 - For CPU-only jobs: 1 SU / 1 ncpu / hour
 - For GPU jobs: 64 SU / 1 ngpu / hour
+
 Please be careful with your compute usage! Once you run out, it will **never be replenished**. 
