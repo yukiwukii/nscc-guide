@@ -5,6 +5,7 @@ In a nutshell, how NSCC work is similar to a mafia organization:
 4. You pass the job file to the worker, who will do the dirty job for you.
 5. While the worker is running the job, you can check on their progress.
 6. Once they are done, they will report back the result of the job, whether it is successful or not, along with the detailed logs.
+
 **Note:** For your AI job to run fast, you need GPU. However, the GPU is only available once you submit the job (in the **compute node**). The place you spawn when you login to NSCC is the **login node**. There is *no* GPU there. So, don't run your scripts with `python my_script.py`! Always write a job file and submit it.
 ## Basics of a Job File
 The job file is written in shell script. You may choose either `.pbs` or `.sh` extension.
@@ -43,7 +44,7 @@ python my_script # Run the script
 Finally, once you are done, `qsub job.pbs` will submit your job to the queue.
 ## Checking your Jobs
 To check how your jobs are doing, use the `qstat` command. You will get a table of your running jobs.
-> [!Question] **Help!** qstat does not return anything.
+> [!Note] **Help!** qstat does not return anything.
 > Your job is either finished, or died. Check your job submission history using `qstat -H`.
 
 The `s` header on the table stands for status. There are a few status your job may have:
@@ -51,7 +52,7 @@ The `s` header on the table stands for status. There are a few status your job m
 - `r` running. This is good. It's processing.
 - `e` exiting. Either finished, or died.
 
->[!Question] **Help!** My job is eternally queueing.
+>[!Note] **Help!** My job is eternally queueing.
 >You need to increase/decrease the ngpu requested and/or the walltime. Use `qstat -s` command to see why your job is queueing. See [Min-maxing the queue](/Min-maxing%20the%20queue.md) for how to game the system.
 ## Checking the Results of your Jobs
 The results of the job is `<job_name>.o<job_id>`.

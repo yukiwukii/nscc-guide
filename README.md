@@ -12,3 +12,7 @@ Surprisingly, not a lot of people know that Singaporean university students are 
 9. [Min-maxing the queue](/Min-maxing%20the%20queue.md)
 
 PS: I use a MacBook, so the guide will be written from the perspective of a MacOS user. For other operating systems, 99% of the stuff is the same, only some of step 1 + step 3 will be slightly different. I recommend you to check out [this guide](https://github.com/16fb/NSCC-Guide), which is specific for Windows users.
+
+## Contribute to this Repo!
+If you know other useful information, please consider contributing! Feel free to submit a PR. Otherwise, here are possible future extensions for this repo:
+- [ ] Guide to Docker & Singularity containers
