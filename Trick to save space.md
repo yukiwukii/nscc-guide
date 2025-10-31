@@ -1,7 +1,7 @@
 There are two types of storage in NSCC:
 1. Home directory (asp2a-home) -> Max: 50GB
 2. Scratch -> Max: 100TB, basically unlimited
-You can check your current usage using `myquota` command.
+You can check your current storage usage using `myquota` command.
 
 Actually, the 50GB limit is **very** restrictive. You should only use your home directory for important files, like key experimental results, etc. For the rest, you should put it under scratch. Accessing scratch: `cd ~/scratch`.
 

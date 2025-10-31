@@ -15,4 +15,4 @@ tar -xf vscode_cli.tar.gz
 5. Name your machine `nscc`
 6. On the control panel, press "Remote-Tunnels: Connect to Tunnel" -> GitHub -> Login to GitHub -> `nscc`
 
-Tada! Now, whenever you want to login, you can just do step 6, without needing to connect to VPN or inputting password, etc etc.
+Done! Now, whenever you want to login, you can just do step 6, without needing to connect to VPN or inputting password, etc etc.

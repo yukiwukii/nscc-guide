@@ -28,7 +28,7 @@ On top of the `job.pbs` file, you need to enter the details.
 Details:
 - `-q` determines which queue you want to use. Just use normal.
 - `-j oe` combines the output and the error files into one file.
-- `-l select=1:ncpus=16:ngpus=4` requests 16-core CPU and 4-core GPU. This is **important**!! You need to request for GPU. If not, your AI job will run **very slowly**.
+- `-l select=1:ncpus=16:ngpus=4` requests 16 CPU and 4 GPU. This is **important**!! You need to request for GPU. If not, your AI job will run **very slowly**.
 - `-l walltime=20:00:00` your job will exit after 20 hours, if it has not completed.
 - `-N` setup your job name. This can be anything, but it should be descriptive.
 - `-P` put it as personal-nscc_username i.e. personal_nady0006
@@ -62,3 +62,8 @@ The results of the job is `<job_name>.o<job_id>`.
 In here, you can find all the output of your script (the one that would be outputted to the terminal otherwise). **Important Note:** You must wait until the job finishes / dies to see the output. If you need to see the output immediately (to monitor the progress or something), you can create an [interactive job](/Running%20jupyter-notebooks.md) instead.
 ## Deleting your Jobs
 To delete the jobs, find the job_id with `qstat`, and delete it by running `qdel <job_id>`.
+## Checking your Quota
+Your NSCC account comes with a fixed amount of compute quota (called Service Unit/SU). After running the job, you can check how much you have left with `myprojects`. 
+- For CPU-only jobs: 1 SU / 1 ncpu / hour
+- For GPU jobs: 64 SU / 1 ngpu / hour
+Please be careful with your compute usage! Once you run out, it will **never be replenished**. 
