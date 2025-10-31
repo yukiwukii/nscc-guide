@@ -44,7 +44,7 @@ python my_script # Run the script
 Finally, once you are done, `qsub job.pbs` will submit your job to the queue.
 ## Checking your Jobs
 To check how your jobs are doing, use the `qstat` command. You will get a table of your running jobs.
-> [!Note] **Help!** qstat does not return anything.
+> [!NOTE] **Help!** qstat does not return anything.
 > Your job is either finished, or died. Check your job submission history using `qstat -H`.
 
 The `s` header on the table stands for status. There are a few status your job may have:
@@ -52,7 +52,7 @@ The `s` header on the table stands for status. There are a few status your job m
 - `r` running. This is good. It's processing.
 - `e` exiting. Either finished, or died.
 
->[!Note] **Help!** My job is eternally queueing.
+>[!NOTE] **Help!** My job is eternally queueing.
 >You need to increase/decrease the ngpu requested and/or the walltime. Use `qstat -s` command to see why your job is queueing. See [Min-maxing the queue](/Min-maxing%20the%20queue.md) for how to game the system.
 ## Checking the Results of your Jobs
 The results of the job is `<job_name>.o<job_id>`.
